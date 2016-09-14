@@ -17,7 +17,7 @@
 2.遍历List,分别处理类注解,属性注解以及方法注解<br/>
 >类注解：如果类注解存在，比如@Repository 那么将类的完整类名作为key(包名+类名)，类的实例作为value保存到一个map中
                 Map<com.mvc.dao.TestDao TestDao.newInstance>
-        属性注解：如果是属性注解那么就需要注入了，优先处理service层，比如 @Autowired 根据反射原理获得该属性的类型，然后根据类型就可以从Map中获取到类型的实例，
+>属性注解：如果是属性注解那么就需要注入了，优先处理service层，比如 @Autowired 根据反射原理获得该属性的类型，然后根据类型就可以从Map中获取到类型的实例，
                   然后就可以通过field.set方法注入属性了。
 
         Object o = instanceMap.get(field.getType().getName());
