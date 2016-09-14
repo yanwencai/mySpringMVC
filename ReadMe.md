@@ -1,12 +1,14 @@
 手写SpringMVC实例代码
 ====================================
 1.核心知识
-    a.servlet规范
-    b.注解以及自定义注解
-    c.反射
+-----------------------------
+    a.servlet规范</br/>
+    b.注解以及自定义注解</br/>
+    c.反射</br/>
 
 
 2.设计
+--------------------------------------
     a.使应用符合mvc结构
     b.定义repository、service、controller、Autowired、RequestMapping注解
     c.使用自定义注解
