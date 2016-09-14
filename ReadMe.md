@@ -20,12 +20,12 @@
         属性注解：如果是属性注解那么就需要注入了，优先处理service层，比如 @Autowired 根据反射原理获得该属性的类型，然后根据类型就可以从Map中获取到类型的实例，
                   然后就可以通过field.set方法注入属性了。
 
-        'Object o = instanceMap.get(field.getType().getName());
+        Object o = instanceMap.get(field.getType().getName());
         try {
             field.set(entry.getValue(),o);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-        }'
+        }
 
 >方法注解：主要处理Controller层中的RequestMapping注解，将注解中的参数作为key，注解的方法的反射对象method作为value，维护到一个map中就可以了。
 
